@@ -24,3 +24,12 @@
       A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks. A custom hook is used when we want to share logic between two JavaScript function. That is, the main idea behind custom hooks is just so that we can extract component logic into reusable functions.
 
 - [ ] Why is it important to test our apps?
+      It is important to test our apps because of the following;
+      It:
+      Surfaces bugs faster.
+      Reduces the risk of regressions.
+      Allows us to trust the code.
+      Makes us think about the edge cases.
+      Acts as a safety net when making changes or refactoring.
+      Acts as documentation for the code.
+      Encourages us to write more testable (better!) code.
