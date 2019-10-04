@@ -10,14 +10,17 @@
 
 - [ ] Name three lifecycle methods and their purposes.
       3 lifecycle methods and their purposes are:
-      -ComponendDidMount(The Birth/Mounting Phase)
+        
+       - componendDidMount()(The Birth/Mounting Phase)
       In this lifecycle method, the component is being built out from ground up. Whatever initial data you’ll have access to will be defined on the constructor of this phase. The render method is also invoked.
 
-      -ComponentDidUpdate(Growth/Updating Phase)
+      - componentDidUpdate()(Growth/Updating Phase)
       In this method, setState can be used to change the component’s state data, forcing a call to render. Also, shouldComponentUpdate is a method one could use here to stop a component from calling render if necessary.
 
-      -componentWillUnmount(Death/Un-mounting Phase)
+      - componentWillUnmount()(Death/Un-mounting Phase)
       This method is when the Component is removed from the screen. The componentWillUnmount is called and can be used for any clean up you may need to do.
 
 - [ ] What is the purpose of a custom hook?
+      A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks. A custom hook is used when we want to share logic between two JavaScript function. That is, the main idea behind custom hooks is just so that we can extract component logic into reusable functions.
+
 - [ ] Why is it important to test our apps?
