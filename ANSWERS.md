@@ -9,7 +9,15 @@
   One way to improve performance (i.e. the amount of re-renders your component does) is to implement a shouldComponentUpdate method. This method gives you the next and current props and state, and lets you implement a boolean expression that triggers a re-render or not.
 
 - [ ] Name three lifecycle methods and their purposes.
-      3 lifecycle methods ane their purposes are:
+      3 lifecycle methods and their purposes are:
+      -ComponendDidMount(The Birth/Mounting Phase)
+      In this lifecycle method, the component is being built out from ground up. Whatever initial data you’ll have access to will be defined on the constructor of this phase. The render method is also invoked.
+
+      -ComponentDidUpdate(Growth/Updating Phase)
+      In this method, setState can be used to change the component’s state data, forcing a call to render. Also, shouldComponentUpdate is a method one could use here to stop a component from calling render if necessary.
+
+      -componentWillUnmount(Death/Un-mounting Phase)
+      This method is when the Component is removed from the screen. The componentWillUnmount is called and can be used for any clean up you may need to do.
 
 - [ ] What is the purpose of a custom hook?
 - [ ] Why is it important to test our apps?
