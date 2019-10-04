@@ -214,9 +214,9 @@ code {
 .dark-mode {
   color: white;
   background-color: #313843;
-
+  /* 
   .navbar {
     background-color: #1f2022;
     border: none;
-  }
+  } */
 }
