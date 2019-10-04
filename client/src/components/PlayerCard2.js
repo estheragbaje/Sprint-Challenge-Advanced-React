@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import useData from "../hooks/useData";
+import { Box, Stack, Text, Flex, Grid } from "@chakra-ui/core";
 
 function PlayerCard2() {
   const [data, isLoading, hasError] = useData();
@@ -12,15 +13,19 @@ function PlayerCard2() {
     return <div>Oooops! An error has occured</div>;
   }
   return (
-    <div>
+    <Box margin="auto" maxWidth="1000px">
       {data.map(item => (
-        <div>
-          <h3>{item.name}</h3>
-          <h5>{item.country}</h5>
-          <p>Searches: {item.searches}</p>
-        </div>
+        <Grid templateColumns="repeat(3, 1fr)" gap="24px" marginY="30px">
+          <Text fontSize="3xl" textAlign="left" fontWeight="bold">
+            {item.name}
+          </Text>
+          <Text fontSize="2xl" textAlign="left">
+            {item.country}
+          </Text>
+          <Text fontSize="lg">Searches: {item.searches}</Text>
+        </Grid>
       ))}
-    </div>
+    </Box>
   );
 }
 
