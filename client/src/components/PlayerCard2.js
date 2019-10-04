@@ -15,7 +15,13 @@ function PlayerCard2() {
   return (
     <Box margin="auto" maxWidth="1000px">
       {data.map(item => (
-        <Grid templateColumns="repeat(3, 1fr)" gap="24px" marginY="30px">
+        <Grid
+          data-testid="player"
+          templateColumns="repeat(3, 1fr)"
+          gap="24px"
+          marginY="30px"
+          key={item.name}
+        >
           <Text fontSize="3xl" textAlign="left" fontWeight="bold">
             {item.name}
           </Text>
