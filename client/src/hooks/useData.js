@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 function useData() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -20,3 +23,5 @@ function useData() {
   }, []);
   return [data, isLoading, hasError];
 }
+
+export default useData;
