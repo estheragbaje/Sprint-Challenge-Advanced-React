@@ -16,6 +16,22 @@ jest.mock("axios", () => {
   };
 });
 
+const localStorageItem = {
+  darkMode: false
+};
+
+const localStorageMock = {
+  getItem: jest.fn().mockImplementation(key => localStorageItem[key]),
+  setItem: jest.fn().mockImplementation((key, value) => {
+    localStorageItem[key] = value;
+  }),
+  clear: jest.fn().mockImplementation(key => {
+    localStorageItem[key] = undefined;
+  })
+};
+
+// window.localStorage = localStorageMock;
+
 beforeEach(() => {
   rtl.cleanup();
   tools = rtl.render(<PlayerCard />);
@@ -26,4 +42,9 @@ describe("PlayerCard component", () => {
     const player = tools.getByTestId("player");
     expect(player).toBeInTheDocument();
   });
+
+  //   it("it toggles dark mode", () => {
+  //     const darkMode = localStorage.getItem("darkMode");
+  //     console.log(darkMode);
+  //   });
 });
