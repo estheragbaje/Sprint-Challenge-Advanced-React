@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+//Created Class Component, PlayerCard
 class PlayerCard extends React.Component {
   constructor(props) {
     super(props);
